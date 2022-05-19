@@ -54,7 +54,7 @@ def indicadores_titanic():
             ClusterId="j-322NZV0LI2VN2",
             StepId=stepId,
             WaiterConfig={
-                'Delay': 10,
+                'Delay': 20,
                 'MaxAttempts': 120
             }
         )
