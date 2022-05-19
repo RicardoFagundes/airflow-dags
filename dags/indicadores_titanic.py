@@ -10,15 +10,16 @@ aws_secret_access_key = Variable.get('aws_secret_access_key')
 
 client = boto3.client(
     'emr', region_name='us-east-1',
-    aws_access_key_id='aws_access_key_id',
-    aws_secret_access_key='aws_secret_access_key'
-    
-    )
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key
+)
 
 default_args = {
-    'owner': 'Ric',
+    'owner': 'Ricardo Fagundes',
     'start_date': datetime(2022, 4, 2)
 }
+
+@dag(default_args=default_args, schedule_interval="*/15 * * * *", description="Executa um job Spark no EMR", catchup=False, tags=['Spark','EMR'])
 def indicadores_titanic():
 
     @task
@@ -69,6 +70,3 @@ def indicadores_titanic():
     #---------------
 
 execucao = indicadores_titanic()
-    
-    
-    
