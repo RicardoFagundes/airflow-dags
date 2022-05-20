@@ -1,2 +1,2 @@
 # airflow-dags
-dags do airflow academico - Novo Cluster
+dags do airflow academico - Criado por Ricardo Fagundes e Carla Caroline
