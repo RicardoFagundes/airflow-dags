@@ -15,7 +15,7 @@ client = boto3.client(
 )
 
 default_args = {
-    'owner': 'Ricardo Fagundes',
+    'owner': 'Ricardo Fagundes e Carla Caroline',
     'start_date': datetime(2022, 4, 2)
 }
 
