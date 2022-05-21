@@ -30,7 +30,7 @@ def indicadores_titanic():
     def emr_process_titanic(success_before: bool):
         if success_before:
             newstep = client.add_job_flow_steps(
-                JobFlowId="j-1XO85EF9ZVJ90",
+                JobFlowId="j-2YWWXAIDXQZ8",
                 Steps=[{
                     'Name': 'Processa indicadores Titanic',
                     'ActionOnFailure': "CONTINUE",
@@ -51,7 +51,7 @@ def indicadores_titanic():
         waiter = client.get_waiter('step_complete')
 
         waiter.wait(
-            ClusterId="j-1XO85EF9ZVJ90",
+            ClusterId="j-2YWWXAIDXQZ8",
             StepId=stepId,
             WaiterConfig={
                 'Delay': 20,
